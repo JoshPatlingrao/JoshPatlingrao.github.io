@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html {
     scrollbar-width: none;
     color: #ffffff;
@@ -14,51 +19,29 @@ body {
 .wrapper {
     width: 100%;
     height: 100%;
-    /*background-color: green;*/
+    background-color: green;
     margin: auto;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
-    position: absolute;
+    /*position: absolute;*/
 }
-
-/*
-.bottom {
-    width: 50%;
-    height: 30%;
-    background-color: blue;
-    position: absolute;
-    bottom: 0px;
-}
-*/
 
 .intro {
     width: 50%;
     height: 100%;
     background-image: linear-gradient(155deg, #000428, #004E92);
     color: #ffffff;
+    float: left;
     /*background-color: blue;*/
-    /*float: left;*/
-    /*position: fixed;*/
+    position: fixed;
 }
 
 .experiences {
     width: 50%;
     height: 100%;
+    background-image: linear-gradient(155deg, #000428, #004E92);
+    float: right;
     /*background-color: brown;*/
-}
-
-#background {
-    width: 50%;
-    height: 100%;
-    background-image: linear-gradient(-155deg, #000428, #004E92);
-    position: absolute;
-    word-wrap: break-word;
-    overflow: auto;
-    /*display: none;*/
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
 }
 
 #projects {
@@ -68,7 +51,7 @@ body {
     position: absolute;
     word-wrap: break-word;
     overflow: auto;
-    /*display: none;*/
+    display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
     opacity: 0;
@@ -79,10 +62,6 @@ body {
     display: none;
 }
 
-#project-text {
-    color: red;
-}
-
 #employment {
     width: 50%;
     height: 100%;
@@ -90,7 +69,7 @@ body {
     position: absolute;
     word-wrap: break-word;
     overflow: auto;
-    /*display: block;*/
+    display: block;
     -ms-overflow-style: none;
     scrollbar-width: none;
     opacity: 1;
@@ -102,9 +81,9 @@ body {
 }
 
 #toggle {
-    width: 10%;
+    width: 250px;
     position: absolute;
-    margin-top: 2%;
+    margin-top: 5%;
     padding: 20px 30px 20px 30px;
     border-radius: 50px;
     border: 3px solid #000000;
@@ -113,8 +92,8 @@ body {
     transition: 0.6s;
     font-size: 20px;
     font-weight: bold;
-    left: 25%;
-    transform: translateX(-25%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #toggle:hover {
@@ -135,7 +114,7 @@ ul {
 }
 
 .intro h1 {
-    padding-top: 65%;
+    padding-top: 60%;
 }
 
 #employment h1,
@@ -145,5 +124,10 @@ ul {
 
 #employment h3,
 #projects h3 {
-    padding-top: 3%;
+    padding-top: 5%;
+}
+
+.intro h3,
+.intro p {
+    padding-top: 2%;
 }

@@ -7,18 +7,20 @@
 </head>
 
 <body>
-    <div class="wrapper flex-row">
+    <div class="wrapper"> <!--flex-row-->
         <div class="intro">
-            <!--<div class="bottom"> </div>-->
-
             <h1>Hello, my name is Joshua Patlingrao</h1>
 
             <h3>Electrical and Electronic Engineer</h3>
 
             <p>
                 I'm a recent graduate with a Bachelor's of Engineering Degree, who's very eager to gain industry
-                experience
-                and expand my expertise in both hardware and software aspects of electronics.
+                experience and expand my expertise in both hardware and software aspects of electronics. With a passion
+                for
+                technology and a drive for continuous learning, I've applied and developed my ability to troubleshoot,
+                repair, and upgrade electronic equipment at my place of employment, while I honed my Python scripting
+                through my volunteer and personal projects. I'm an organized, capable junior engineer, who bring
+                diligence and independence in my everyday life.
             </p>
 
             <button type="button" id="toggle">MY PROJECTS</button>
@@ -185,31 +187,16 @@
     button.onclick = function () {
         if (employDiv.style.opacity !== "0") {
             employDiv.style.opacity = "0"
+            employDiv.style.display = "none"
             projectDiv.style.opacity = "1"
+            projectDiv.style.display = "block"
             button.innerText = "WORK HISTORY"
         } else {
             employDiv.style.opacity = "1"
+            employDiv.style.display = "block"
             projectDiv.style.opacity = "0"
+            projectDiv.style.display = "none"
             button.innerText = "MY PROJECTS"
         }
     }
-
-
-    /*
-    let employ = document.querySelector("#employment")
-    let project = document.querySelector("#projects")
-    let toggle = document.querySelector("#toggle")
-
-    toggle.onclick = function () {
-        if (employ.classList.contains("fade-out")) {
-            employ.classList.remove("fade-out");
-            project.classList.add("fade-out");
-            button.innerText = "WORK HISTORY";
-        } else {
-            employ.classList.add("fade-out")
-            project.classList.remove("fade-out");
-            button.innerText = "MY PROJECTS"
-        }
-    }
-    */
 </script>
