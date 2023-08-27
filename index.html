@@ -3,20 +3,213 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello, my name is Joshua Patlingrao</h1>
-    <h3>I'm an Electrical and Electronic Engineer</h3>
+    <div class="wrapper flex-row">
+        <div class="intro">
+            <!--<div class="bottom"> </div>-->
 
-    <div class="projects">
-        <h1>Projects</h1>
+            <h1>Hello, my name is Joshua Patlingrao</h1>
+
+            <h3>Electrical and Electronic Engineer</h3>
+
+            <p>
+                I'm a recent graduate with a Bachelor's of Engineering Degree, who's very eager to gain industry
+                experience
+                and expand my expertise in both hardware and software aspects of electronics.
+            </p>
+
+            <button type="button" id="toggle">MY PROJECTS</button>
+        </div>
+
+        <div class="experiences">
+            <div id="projects">
+                <h1>Projects</h1>
+
+                <h3>Multi-Agent System Control for Microgrid Cluster</h3>
+                <p>University, 2021</p>
+                <p><b>Skills:</b> MATLAB, Simulink, Arduino, Microgrids, Power Systems</p>
+                <ul>
+                    <li>
+                        Researched and simulated the effect of a conventional droop controller on the microgrid and the
+                        ‘averaged consensus algorithm’ as a form of multi-agent system control to a microgrid cluster of
+                        three microgrids on Simulink.
+                    </li>
+                    <li>
+                        Tested and applied basic power sharing algorithm for the microgrid cluster.
+                    </li>
+                    <li>
+                        Programmed the Simulink simulation on an Arduino board and programmed the boards to transmit
+                        data
+                        between them via a wired connection.
+                    </li>
+                </ul>
+
+                <h3>Low-Cost Frequency Relay</h3>
+                <p>University, 2021</p>
+                <p><b>Skills:</b> C++, FreeRTOS, Quartus II, Embedded Systems</p>
+                <ul>
+                    <li>
+                        Separated multiple functions of the relay into multiple concurrent tasks which were prioritised
+                        and
+                        controlled by the Task Scheduler.
+                    </li>
+                    <li>
+                        Used Quartus II as a development platform to program the DE2-115 development board.
+                    </li>
+                    <li>
+                        Used C++ to develop the timers, interrupts and reading inputs from connected peripherals.
+                    </li>
+                    <li>
+                        Used Atmel Studio to design the function for the LED driver and assisted in the design of the
+                        closing and opening door functions.
+                    </li>
+                </ul>
+
+                <h3>Airport Baggage Control</h3>
+                <p>University, 2021</p>
+                <p><b>Skills:</b> Java, FBDK</p>
+                <ul>
+                    <li>
+                        Designed a modular, modified function block, with additional algorithms and states in its ECC
+                        diagram, for the conveyer belts involved in my critical section.
+                    </li>
+                    <li>
+                        Collaborated and integrated my multicast mutex algorithm along with the ring token and central
+                        server algorithms from my teammates to different critical sections in the conveyer system.
+                    </li>
+                </ul>
+
+                <h3>Website Status Notifier</h3>
+                <p>Volunteer, 2023</p>
+                <p><b>Skills:</b> Python, VNC, Git/Github, Raspberry Pi</p>
+                <ul>
+                    <li>
+                        Developed a basic Python script that monitors the status of the websites we worked on and notify
+                        our
+                        web development team through email in case of technical issues or downtime.
+                    </li>
+                    <li>
+                        Used a Raspberry Pi on a headless setup as a development environment and server for the script.
+                    </li>
+                    <li>
+                        Investigated the differences between polling, concurrency and parallelism when scanning for
+                        large volumes of websites.
+                    </li>
+                    <li>
+                        Applied parallelism for its speed at monitoring large number of
+                        websites and allowing for more frequent checks.
+                    </li>
+                    <li>
+                        Applied version control when debugging the code and observing modifications by team members on
+                        GitHub.
+                    </li>
+                    <li>
+                        Installed additional modules through CMD to expand the scripts functionality to allow for
+                        parallelism and sending email notifications.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="employment">
+                <h1>Employment History</h1>
+
+                <h3>Maintenance Technician</h3>
+                <p><b>Rakon</b></p>
+                <p>15 Aug 2022 - Present</p>
+                <ul>
+                    <li>
+                        Modified test racks and power supplies to include surge protection as part of continued
+                        improvement
+                        initiative, reducing risk of surge damage on units being tested.
+                    </li>
+                    <li>
+                        Duplicated a voltage box controller as specified on PCB schematic, tested, and connected it to a
+                        recommissioned test oven, and increased overall production yield.
+                    </li>
+                    <li>
+                        Analysed source of faults in a Saunders oven, repaired faulty components and increased
+                        production
+                        yield by 2x – 3x.
+                    </li>
+                    <li>
+                        Assisted and advised production operators and team leaders on what procedure to follow when
+                        encountering difficulties or failure.
+                    </li>
+                    <li>
+                        Collaborated with various maintenance, engineering, and IT teams to repair major breakdowns and
+                        perform equipment upgrades.
+                    </li>
+                </ul>
+
+                <h3>Production Operator</h3>
+                <p><b>Rakon</b></p>
+                <p>28 Mar 2022 - 12 Aug 2022</p>
+                <ul>
+                    <li>
+                        Troubleshooting ovens to ensure near maximum capacity of units are detected successfully.
+                    </li>
+                    <li>
+                        Logged production process on the travellers, oven configuration and yields on logbooks, and
+                        finalised batch results in SAP.
+                    </li>
+                    <li>
+                        Assisted senior staff members in teaching and training junior production operators.
+                    </li>
+                    <li>
+                        Coordinated our team whenever senior staff are unavailable and took on requests from
+                        technicians,
+                        engineers, and managers.
+                    </li>
+                    <li>
+                        Assisted in experimentation of new units and streamlining of new processes.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
     </div>
-
-    <div class="employment">
-        <h1>Employment History</h1>
-    </div>
-
 </body>
 
 </html>
+
+<script>
+    const employDiv = document.getElementById("employment");
+    const projectDiv = document.getElementById("projects")
+    const button = document.getElementById("toggle");
+
+    button.onclick = function () {
+        if (employDiv.style.opacity !== "0") {
+            employDiv.style.opacity = "0"
+            projectDiv.style.opacity = "1"
+            button.innerText = "WORK HISTORY"
+        } else {
+            employDiv.style.opacity = "1"
+            projectDiv.style.opacity = "0"
+            button.innerText = "MY PROJECTS"
+        }
+    }
+
+
+    /*
+    let employ = document.querySelector("#employment")
+    let project = document.querySelector("#projects")
+    let toggle = document.querySelector("#toggle")
+
+    toggle.onclick = function () {
+        if (employ.classList.contains("fade-out")) {
+            employ.classList.remove("fade-out");
+            project.classList.add("fade-out");
+            button.innerText = "WORK HISTORY";
+        } else {
+            employ.classList.add("fade-out")
+            project.classList.remove("fade-out");
+            button.innerText = "MY PROJECTS"
+        }
+    }
+    */
+</script>
